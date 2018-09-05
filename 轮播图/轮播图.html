@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+    <title>轮播图</title>
+</head>
+<body>
+    <div class="container">
+        <p class="tit t-top">1/5</p>
+        <ul>
+            <li class="list first"><img src="images/1.jpg" alt=""></li>
+            <li class="list"><img src="images/2.jpg" alt=""></li>
+            <li class="list"><img src="images/3.jpg" alt=""></li>
+            <li class="list"><img src="images/4.jpg" alt=""></li>
+            <li class="list"><img src="images/5.jpg" alt=""></li>
+        </ul>
+        <p class="tit t-bottom">图片切换</p>
+        <span class="btn btn-left">&lt;</span>
+        <span class="btn btn-right">&gt;</span>
+    </div>
+    <button class="active">单边模式</button>
+    <button>循环模式</button>
+    <script>
+        let aBtn = document.getElementsByClassName("btn"),
+            aLoop = document.getElementsByTagName("button"),
+            oTop = document.getElementsByClassName("t-top"),
+            aLi = document.getElementsByClassName("list"),
+            listNum = 0,
+            bol = false;
+        for (let i = 0; i <= 1; i++) {
+            if (i == 0) {
+                aLoop[i].onclick = function () {
+                    aLoop[i].className = "active";
+                    aLoop[1].className = "";
+                    bol = !bol;
+                }
+            } else {
+                aLoop[i].onclick = function () {
+                    aLoop[i].className = "active";
+                    aLoop[0].className = "";
+                    bol = !bol;
+                }
+            }
+            aBtn[i].onclick = function () {
+                if (i == 0) {
+                    if (listNum > 0) {
+                        aLi[listNum].style.display = "none";
+                        listNum--;
+                        aLi[listNum].style.display = "block";
+                        oTop[0].innerHTML = (listNum + 1) + "/5";
+                    } else if (bol) {
+                        aLi[listNum].style.display = "none";
+                        listNum = 4;
+                        aLi[listNum].style.display = "block";
+                        oTop[0].innerHTML = (listNum + 1) + "/5";
+                    }
+                } else {
+                    if (listNum < 4) {
+                        aLi[listNum].style.display = "none";
+                        listNum++;
+                        aLi[listNum].style.display = "block";
+                        oTop[0].innerHTML = (listNum + 1) + "/5";
+                    } else if (bol) {
+                        aLi[listNum].style.display = "none";
+                        listNum = 0;
+                        aLi[listNum].style.display = "block";
+                        oTop[0].innerHTML = (listNum + 1) + "/5";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

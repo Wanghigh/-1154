@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Generator" content="WebStorm">
+    <meta name="Author" content="书树">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>购物车</title>
+    <link href="./CSS/style.css" rel="stylesheet">
+    <script src="./JS/script.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="shopping">
+        <div class="title">
+            <div class="column t-checkbox">全选</div>
+            <div class="column t-goods">商品</div>
+            <div class="column t-props"></div>
+            <div class="column t-price">单价</div>
+            <div class="column t-quantity">数量</div>
+            <div class="column t-sum">小计</div>
+            <div class="column t-action">操作</div>
+        </div>
+        <ul>
+            <li>
+                <div class="store-name"></div>
+                <div class="goods">
+                    <div class="check-box"></div>
+                    <div class="info">
+                        <a class="goods-pic" href=""><img src="./Images/01.jpg" width="80" height="80" alt="商品图片"></a>
+                        <div class="goods-info">
+                            <a href="#">尼格尔双肩包男士背包商务电脑包15.6/17.3寸大容量出差旅行包多功能防盗 典雅黑(USB充电)</a>
+                        </div>
+                        <div class="goods-size">颜色：典雅黑（USB充电）</div>
+                        <div class="good-price">￥ 218.00</div>
+                        <div class="goods-quantity">
+                            <div class="fix subtract">-</div>
+                            <input type="text" value="0"/>
+                            <div class="fix add">+</div>
+                            <div class="goods-indent">有货</div>
+                        </div>
+                        <div class="goods-sum">￥ 0.00</div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="store-name"></div>
+                <div class="goods">
+                    <div class="check-box"></div>
+                    <div class="info">
+                        <a class="goods-pic" href=""><img src="./Images/02.jpg" width="80" height="80" alt="商品图片"></a>
+                        <div class="goods-info">
+                            <a href="#">瑞动（SWISSMOBILITY）拉杆箱24英寸旅行箱 大容量行李箱轻盈静音万向轮男女 5555黑色</a>
+                        </div>
+                        <div class="goods-size">颜色：黑色</div>
+                        <div class="good-price">￥ 299.00</div>
+                        <div class="goods-quantity">
+                            <div class="fix subtract">-</div>
+                            <input type="text" value="0"/>
+                            <div class="fix add">+</div>
+                            <div class="goods-indent">有货</div>
+                        </div>
+                        <div class="goods-sum">￥ 0.00</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div id="total">
+            <span class="all-change">全选</span>
+            <div class="goods-calcu">
+                <div id="settlement">去结算</div>
+                <div class="price">
+                    <span>&nbsp;&nbsp;&nbsp;总价:</span><span id="sum-price">￥0.00</span><br/>
+                    <span>以节省:</span><span class="decrease-price">- ￥0.00 </span>
+                </div>
+                <div class="count">已选择<span id="sum-num">0</span>件商品</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

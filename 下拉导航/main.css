@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 500px;
+    margin: 50px auto;
+}
+.container .drop>li{
+    float: left;
+    width: 90px;
+    height: 25px;
+    background-color: #eee;
+}
+.container .drop li .dropdown{
+    height: 0px;
+    background-color: #f68e8c;
+    overflow: hidden;
+}
+.container .drop li .dropdown ul li{
+    border: 1px solid black;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>下拉导航栏</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+</head>
+<body>
+    <div class="container">
+        <ul class="drop">
+            <li>本站网页</li>
+            <li class="list">组织机构
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">团委简介</a></li>
+                        <li><a href="#">组织机构</a></li>
+                        <li><a href="#">学生组织</a></li>
+                        <li><a href="#">学生社团</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list">团务资料
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">团务知识</a></li>
+                        <li><a href="#">团发文件</a></li>
+                        <li><a href="#">工作制度</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list">品牌创建
+                <div class="dropdown">
+                    <ul>
+                        <li><a href="#">思想引领</a></li>
+                        <li><a href="#">创新创业</a></li>
+                        <li><a href="#">文化活动</a></li>
+                        <li><a href="#">实践育人</a></li>
+                        <li><a href="#">组织建设</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="list">青年之家
+               <div class="dropdown">
+                   <ul>
+                    <li><a href="#">场地预约</a></li>
+                    <li><a href="#">物资借用</a></li>
+                    <li><a href="#">第二课堂</a></li>
+                    <li><a href="#">权益维护</a></li>
+                   </ul>
+               </div>
+            </li>
+        </ul>
+    </div>
+    <script>
+        let aList = document.getElementsByClassName("list"),
+            aDrop = document.getElementsByClassName("dropdown");
+
+        for(let i=0;i<aList.length;i++){
+            aList[i].onmouseenter = function(){
+                aDrop[i].style.height = "auto";
+            }
+            aList[i].onmouseleave = function(){
+                aDrop[i].style.height = "0px";
+            }
+        }//我还不知道如何用js控制执行时间的
+    </script>
+</body>
+</html>
